@@ -12,6 +12,10 @@ import SwiftyJSON
 
 class CovidFetchRequest: ObservableObject {
     
+    @Published var allcountries : [CountryData] = []
+    @Published var totalData: TotalData = testTotalData
+    
+    
     init() {
         
         getCurrentTotal()
@@ -28,8 +32,24 @@ class CovidFetchRequest: ObservableObject {
         AF.request("https://covid-19-data.p.rapidapi.com/totals?format=json", headers:
             headers).responseJSON { response in
                 
+                let result = response.data
                 
-            debugPrint(response)
+                if result != nil {
+                    let json  = JSON(result!)
+//                    print(json)
+                    
+                    let confirmed = json[0]["confirmed"].intValue
+                    let deaths = json[0]["deaths"].intValue
+                    let recovered = json[0]["recovered"].intValue
+                    let critical = json[0]["critical"].intValue
+                    let lastChange = json[0]["lastChange"].stringValue
+                    let lastUpdate = json[0]["lastUpdate"].stringValue
+                    
+                    self.totalData = TotalData(confirmed: confirmed, critical: critical, deaths: deaths, lastChange: lastChange, lastUpdate: lastUpdate, recovered: recovered)
+                } else {
+                    self.totalData = testTotalData
+                }
+ 
         }
     }
     
