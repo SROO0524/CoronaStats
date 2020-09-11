@@ -12,11 +12,17 @@ struct RecentView: View {
     
     @ObservedObject var covidFetch = CovidFetchRequest()
     @State var searchText = ""
+    @State var isSearchVisible = false
     
     var body: some View {
         
         NavigationView {
             VStack {
+                
+                if isSearchVisible {
+                    SearchView(searchText: $searchText)
+                }
+                
                 TotalDataView(totalData: covidFetch.totalData) // 올리는 순서대로 생기는듯?
                 ListHeaderView()
                 List {
@@ -27,9 +33,28 @@ struct RecentView: View {
                         
                         CountryDataRowView(countryData: countryData)
                     }
-
+                    
                 }
             }
+                
+            .navigationBarTitle("Recent Data", displayMode: .inline )
+            .navigationBarItems(trailing:
+                
+                // 상단 나라 검색 토글
+                Button(action: {
+                    
+                    self.isSearchVisible.toggle()
+                    
+                    if !self.isSearchVisible {
+                        self.searchText = ""
+                        
+                    }
+                    
+                },label: {
+                    Image(systemName: "magnifyingglass")
+                })
+            )
+            
         } // End of Navigation
         
     }

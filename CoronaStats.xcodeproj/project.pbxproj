@@ -23,6 +23,7 @@
 		DE8202FF250B9A79008537B1 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8202FE250B9A79008537B1 /* Extension.swift */; };
 		DE820303250BBD9D008537B1 /* TotalDataCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE820302250BBD9D008537B1 /* TotalDataCard.swift */; };
 		DE820305250BC09F008537B1 /* TotalDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE820304250BC09F008537B1 /* TotalDataView.swift */; };
+		DE820307250BC67E008537B1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE820306250BC67E008537B1 /* SearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		DE8202FE250B9A79008537B1 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		DE820302250BBD9D008537B1 /* TotalDataCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalDataCard.swift; sourceTree = "<group>"; };
 		DE820304250BC09F008537B1 /* TotalDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalDataView.swift; sourceTree = "<group>"; };
+		DE820306250BC67E008537B1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				DE8202FC250B6980008537B1 /* CountryDataRowView.swift */,
 				DE820302250BBD9D008537B1 /* TotalDataCard.swift */,
 				DE820304250BC09F008537B1 /* TotalDataView.swift */,
+				DE820306250BC67E008537B1 /* SearchView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				DE8202DE250A62FF008537B1 /* ContentView.swift in Sources */,
 				DE8202FF250B9A79008537B1 /* Extension.swift in Sources */,
 				DE8202F9250B64B7008537B1 /* RecentView.swift in Sources */,
+				DE820307250BC67E008537B1 /* SearchView.swift in Sources */,
 				DE8202D9250A62FF008537B1 /* SceneDelegate.swift in Sources */,
 				DE8202FB250B66E7008537B1 /* ListHeaderView.swift in Sources */,
 				DE820303250BBD9D008537B1 /* TotalDataCard.swift in Sources */,

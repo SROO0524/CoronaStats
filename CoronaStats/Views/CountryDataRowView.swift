@@ -21,7 +21,7 @@ struct CountryDataRowView: View {
                 .font(.subheadline)
                 .frame(width: 110, alignment: .leading)
                 .lineLimit(2) // 텍스트의 줄 수 (2줄)
-                .padding(.leading, 15)
+                .padding(.leading, 2)
             
             Spacer()
             
