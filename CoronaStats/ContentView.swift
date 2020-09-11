@@ -16,7 +16,7 @@ struct ContentView: View {
         TabView {
             RecentView()
             .tabItem{
-                Tab(imageName: "Chart.bar", text: "Recent")
+                Tab(imageName: "chart.bar", text: "Recent")
             }
             .tag(0)
             

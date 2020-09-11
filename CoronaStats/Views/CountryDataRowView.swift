@@ -27,21 +27,21 @@ struct CountryDataRowView: View {
             
             Text(countryData.confirmed.formatNumber())
                 .font(.subheadline)
-                .frame(height: 40)
-                .padding(.leading, 5)
+                .frame(width: 80, height: 40)
+                .padding(.leading, -30)
             
             Spacer()
             
             Text(countryData.deaths.formatNumber())
-                .frame(width: 50,height: 40,alignment: .center)
+                .frame(width: 80,height: 40,alignment: .center)
                 .foregroundColor(.red)
                 .font(.subheadline)
-                .padding(.leading, 5)
+                .padding(.leading, 2)
             
             Spacer()
             
             Text(countryData.recovered.formatNumber())
-                .frame(width: 50,height: 40,alignment: .center)
+                .frame(width: 80,height: 40,alignment: .center)
                 .foregroundColor(.green)
                 .font(.subheadline)
         }
