@@ -44,6 +44,7 @@ struct CountryDataRowView: View {
                 .frame(width: 80,height: 40,alignment: .center)
                 .foregroundColor(.green)
                 .font(.subheadline)
+                .padding(.trailing, -10)
         }
         
         
