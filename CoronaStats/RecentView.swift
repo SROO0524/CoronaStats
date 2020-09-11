@@ -11,9 +11,32 @@ import SwiftUI
 struct RecentView: View {
     
     @ObservedObject var CovidFetch = CovidFetchRequest()
+    @State var searchText = ""
     
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        
+        NavigationView {
+            VStack {
+                ListHeaderView()
+//                List {
+////                    ForEach(CovidFetch.allcountries.filter {
+////                        self.searchText.isEmpty ? true : $0.country.lowercased().contains(self.searchText
+////                            .lowercased()
+////                        )
+////
+////                    }, id: \.country) { CountryData in
+////
+////
+////
+////                    }
+////
+////                    )
+//
+//                }
+                
+            }
+        } // End of Navigation
+        
     }
 }
 
