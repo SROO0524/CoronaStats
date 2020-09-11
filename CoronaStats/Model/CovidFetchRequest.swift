@@ -84,10 +84,7 @@ class CovidFetchRequest: ObservableObject {
                         let countryObject = CountryData(country: country, confirmed: confirmed, critical: critical, deaths: deaths, lastChange: lastChange, lastUpdate: lastUpdate, recovered: recovered, longitude: longitude, latitude: latitude)
                         
                         self.allcountries.append(countryObject)
-                        
-                        
-                        
-                        
+   
                     }
                     
                 }
