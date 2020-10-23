@@ -20,27 +20,41 @@ class CountryStatisticsFetch: ObservableObject {
         "x-rapidapi-host": "covid-193.p.rapidapi.com",
         "x-rapidapi-key": "6d4235bc12mshe8fb5bb4d6292e2p17f0bfjsn73e6988ebeb0"
     ]
-
-    init() {}
+    
+    init() {
+        getStatsFor(country: "usa")
+    }
     
     func getStatsFor(country:String) {
         
         AF.request("https://rapidapi.p.rapidapi.com/statistics?country=\(country)", headers:
-            headers).responseJSON { response in
-                
-                let result = response.data
-                
-                if result != nil {
-                    let json  = JSON(result!)
-                    print(json)
-    
-                } else {
-                    
-                }
-        }
+                    headers).responseJSON { response in
+                        
+                        let result = response.data
+                        
+                        if result != nil {
+                            let json  = JSON(result!)
+                            print(json["response"][0])
+                            
+                            let country = json["response"][0]["country"].stringValue
+                            
+                            let deaths = json["response"][0]["deaths"]["total"].intValue
+                            let newDeaths = json["response"][0]["deaths"]["new"].intValue
+                            
+                            let tests = json["response"][0]["tests"]["total"].intValue
+                            
+                            let criticalCases = json["response"][0]["cases"]["critical"].intValue
+                            let totalCases = json["response"][0]["cases"]["total"].intValue
+                            let activeCases = json["response"][0]["cases"]["active"].intValue
+                            let newCases = json["response"][0]["cases"]["new"].intValue
+                            let recoveredCases = json["response"][0]["cases"]["recovered"].intValue
+                            
+                            self.detatilCountryData = DetailCountryData(country: country, confirmedCases: totalCases, newCases: newCases, recoveredCases: recoveredCases, criticalCases: criticalCases, activeCases: activeCases, deaths: deaths, newDeaths: newDeaths, testDone: tests)
+                        }
+                    }
     }
     
     
-
+    
     
 }
