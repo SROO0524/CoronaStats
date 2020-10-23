@@ -28,6 +28,7 @@
 		DE82030B250BD039008537B1 /* CountryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82030A250BD039008537B1 /* CountryDetailView.swift */; };
 		DE82030D250BD7F3008537B1 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82030C250BD7F3008537B1 /* MapView.swift */; };
 		DECCE9532542AC670086218C /* MapContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECCE9522542AC670086218C /* MapContainerView.swift */; };
+		DECCE9562542B8740086218C /* CountryStatisticsFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECCE9552542B8740086218C /* CountryStatisticsFetch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		DE82030A250BD039008537B1 /* CountryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailView.swift; sourceTree = "<group>"; };
 		DE82030C250BD7F3008537B1 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		DECCE9522542AC670086218C /* MapContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapContainerView.swift; sourceTree = "<group>"; };
+		DECCE9552542B8740086218C /* CountryStatisticsFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryStatisticsFetch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				DE8202ED250A6E13008537B1 /* CovidFetchRequest.swift */,
+				DECCE9552542B8740086218C /* CountryStatisticsFetch.swift */,
 				DE8202EF250A7B4F008537B1 /* Model.swift */,
 			);
 			path = Model;
@@ -288,6 +291,7 @@
 				DE8202F0250A7B4F008537B1 /* Model.swift in Sources */,
 				DE8202DE250A62FF008537B1 /* ContentView.swift in Sources */,
 				DE8202FF250B9A79008537B1 /* Extension.swift in Sources */,
+				DECCE9562542B8740086218C /* CountryStatisticsFetch.swift in Sources */,
 				DE8202F9250B64B7008537B1 /* RecentView.swift in Sources */,
 				DE820307250BC67E008537B1 /* SearchView.swift in Sources */,
 				DE82030B250BD039008537B1 /* CountryDetailView.swift in Sources */,
