@@ -22,7 +22,23 @@ struct CountryDetailView: View {
                 
                 CountryDetailrow(number: countryStatisticsRequest.detatilCountryData?.activeCases.formatNumber() ?? "Err", name: "Active Cases")
                 
-                CountryDetailrow(number: countryStatisticsRequest.detatilCountryData?.newCases.formatNumber() ?? "Err", name: "New Cases")
+                CountryDetailrow(number: "+" + (countryStatisticsRequest.detatilCountryData?.newCases.formatNumber() ?? "Err"), name: "New Cases")
+                
+                CountryDetailrow(number: countryStatisticsRequest.detatilCountryData?.recoveredCases.formatNumber() ?? "Err", name: "Recovered Cases", color: .green)
+                
+                CountryDetailrow(number: countryStatisticsRequest.detatilCountryData?.criticalCases.formatNumber() ?? "Err", name: "Criticle Cases", color: .yellow)
+                
+                CountryDetailrow(number: countryStatisticsRequest.detatilCountryData?.deaths.formatNumber() ?? "Err", name: "Death Cases", color: .red)
+                
+                CountryDetailrow(number: "+" + (countryStatisticsRequest.detatilCountryData?.newDeaths.formatNumber() ?? "Err"), name: "New Death", color: .red)
+                
+                CountryDetailrow(number: countryStatisticsRequest.detatilCountryData?.testDone.formatNumber() ?? "Err", name: "Test Done", color: .yellow)
+                
+                CountryDetailrow(number: String(format: "%.2f", countryStatisticsRequest.detatilCountryData?.fatalityRate ?? 0.0) + "%", name: "Fatality Rate", color: .red)
+                
+                CountryDetailrow(number: String(format: "%.2f", countryStatisticsRequest.detatilCountryData?.recoverRate ?? 0.0) + "%", name: "Recovery Rate", color: .green)
+
+                
                 
 
             }
@@ -34,7 +50,7 @@ struct CountryDetailView: View {
             Spacer()
         }
         
-        .padding(.top,50)
+        .padding(.top,25)
         .navigationBarTitle(countryName)
         .onAppear(){
             self.getStaticstacics()

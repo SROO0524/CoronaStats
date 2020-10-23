@@ -8,45 +8,52 @@
 
 import SwiftUI
 
+import SwiftUI
+
 struct CountryDataRowView: View {
     
     var countryData: CountryData
     
+    
     var body: some View {
         
         HStack {
-            
             Text(countryData.country)
                 .fontWeight(.medium)
                 .font(.subheadline)
+                .lineLimit(2)
                 .frame(width: 110, alignment: .leading)
-                .lineLimit(2) // 텍스트의 줄 수 (2줄)
-                .padding(.leading, 2)
-            
-            Spacer()
-            
-            Text(countryData.confirmed.formatNumber())
-                .font(.subheadline)
-                .frame(width: 80, height: 40)
-                .padding(.leading, -30)
 
             Spacer()
             
-            Text(countryData.deaths.formatNumber())
-                .frame(width: 80,height: 40,alignment: .center)
-                .foregroundColor(.red)
+            Text(countryData.confirmed.formatNumber())
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
                 .font(.subheadline)
-                .padding(.leading, 2)
+                .frame(height: 40)
+                .padding(.leading, 5)
+            
+            Spacer()
+            
+            Text(countryData.deaths.formatNumber())
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
+                .frame(width: 50, height: 40, alignment: .center)
+                .font(.subheadline)
+                .foregroundColor(.red)
+                .padding(.leading, 5)
             
             Spacer()
             
             Text(countryData.recovered.formatNumber())
-                .frame(width: 80,height: 40,alignment: .center)
-                .foregroundColor(.green)
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
+                .frame(width: 50, height: 40, alignment: .center)
                 .font(.subheadline)
-                .padding(.trailing, -10)
+                .foregroundColor(.green)
         }
-  
+
+        
     }
 }
 
