@@ -10,21 +10,21 @@ import SwiftUI
 
 struct CountryDetailView: View {
     
-    var countryData : CountryData
+    @ObservedObject var countryStatisticsRequest = CountryStatisticsFetch()
+    var countryName : String
     
     var body: some View {
         VStack {
-            
             VStack {
-                CountryDetailrow(number: countryData.confirmed.formatNumber(), name: "Confirmed")
+                CountryDetailrow(number: countryStatisticsRequest.detatilCountryData?.confirmedCases.formatNumber() ?? "Err", name: "Confirmed")
+                    
                     .padding(.top)
-                CountryDetailrow(number: countryData.critical.formatNumber(), name: "Critical", color: .yellow)
-                CountryDetailrow(number: countryData.deaths.formatNumber(), name: "Death", color: .red)
-                CountryDetailrow(number: String(format: "%.2f", countryData.fatalityRate), name: "Death %", color: .red)
-                CountryDetailrow(number: countryData.confirmed.formatNumber(), name: "Recovered", color: .green)
-                CountryDetailrow(number: String(format: "%.2f", countryData.recoverRate), name: "Recovery %", color: .green)
                 
+                CountryDetailrow(number: countryStatisticsRequest.detatilCountryData?.activeCases.formatNumber() ?? "Err", name: "Active Cases")
                 
+                CountryDetailrow(number: countryStatisticsRequest.detatilCountryData?.newCases.formatNumber() ?? "Err", name: "New Cases")
+                
+
             }
                 
             .background(Color("CardBackgroundGray"))
@@ -35,14 +35,17 @@ struct CountryDetailView: View {
         }
         
         .padding(.top,50)
-        .navigationBarTitle(countryData.country)
+        .navigationBarTitle(countryName)
+        .onAppear(){
+            self.getStaticstacics()
+        }
+        
+    }
+    
+    private func getStaticstacics() {
+        countryStatisticsRequest.getStatsFor(country: self.countryName)
         
     }
     
 }
 
-struct CountryDetailView_Previews: PreviewProvider {
-    static var previews: some View {
-        CountryDetailView(countryData: testCountryData)
-    }
-}

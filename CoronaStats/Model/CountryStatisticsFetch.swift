@@ -22,7 +22,6 @@ class CountryStatisticsFetch: ObservableObject {
     ]
     
     init() {
-        getStatsFor(country: "usa")
     }
     
     func getStatsFor(country:String) {
@@ -34,7 +33,6 @@ class CountryStatisticsFetch: ObservableObject {
                         
                         if result != nil {
                             let json  = JSON(result!)
-                            print(json["response"][0])
                             
                             let country = json["response"][0]["country"].stringValue
                             

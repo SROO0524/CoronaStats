@@ -36,8 +36,8 @@ struct RecentView: View {
                         
                         // NavigationLink : NavigationView의 다음 View로 넘어갈 수 있게 해주는 링크, 셀안에서는 > 로 표기됨
                         
-                        NavigationLink(destination:
-                            CountryDetailView(countryData: countryData)) {
+                        NavigationLink(destination: CountryDetailView(countryName: countryData.country)) {
+                            
                             CountryDataRowView(countryData: countryData)
                             
                         }
