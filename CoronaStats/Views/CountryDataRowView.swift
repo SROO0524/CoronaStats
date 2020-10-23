@@ -29,7 +29,7 @@ struct CountryDataRowView: View {
                 .font(.subheadline)
                 .frame(width: 80, height: 40)
                 .padding(.leading, -30)
-            
+
             Spacer()
             
             Text(countryData.deaths.formatNumber())
@@ -46,9 +46,7 @@ struct CountryDataRowView: View {
                 .font(.subheadline)
                 .padding(.trailing, -10)
         }
-        
-        
-        
+  
     }
 }
 

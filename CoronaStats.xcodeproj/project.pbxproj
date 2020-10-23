@@ -27,6 +27,7 @@
 		DE820309250BCE88008537B1 /* CountryDetailrow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE820308250BCE88008537B1 /* CountryDetailrow.swift */; };
 		DE82030B250BD039008537B1 /* CountryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82030A250BD039008537B1 /* CountryDetailView.swift */; };
 		DE82030D250BD7F3008537B1 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE82030C250BD7F3008537B1 /* MapView.swift */; };
+		DECCE9532542AC670086218C /* MapContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DECCE9522542AC670086218C /* MapContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		DE820308250BCE88008537B1 /* CountryDetailrow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailrow.swift; sourceTree = "<group>"; };
 		DE82030A250BD039008537B1 /* CountryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryDetailView.swift; sourceTree = "<group>"; };
 		DE82030C250BD7F3008537B1 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		DECCE9522542AC670086218C /* MapContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				DE8202DD250A62FF008537B1 /* ContentView.swift */,
 				DE8202F8250B64B7008537B1 /* RecentView.swift */,
 				DE82030A250BD039008537B1 /* CountryDetailView.swift */,
+				DECCE9522542AC670086218C /* MapContainerView.swift */,
 				DE820301250BBD75008537B1 /* Views */,
 				DE820300250BBD5A008537B1 /* Extension */,
 				DE8202F7250B649B008537B1 /* Model */,
@@ -288,6 +291,7 @@
 				DE8202F9250B64B7008537B1 /* RecentView.swift in Sources */,
 				DE820307250BC67E008537B1 /* SearchView.swift in Sources */,
 				DE82030B250BD039008537B1 /* CountryDetailView.swift in Sources */,
+				DECCE9532542AC670086218C /* MapContainerView.swift in Sources */,
 				DE8202D9250A62FF008537B1 /* SceneDelegate.swift in Sources */,
 				DE8202FB250B66E7008537B1 /* ListHeaderView.swift in Sources */,
 				DE820303250BBD9D008537B1 /* TotalDataCard.swift in Sources */,

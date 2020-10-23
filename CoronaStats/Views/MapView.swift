@@ -32,7 +32,7 @@ struct MapView : UIViewRepresentable {
         }
         
         uiView.annotations.forEach{uiView.removeAnnotation($0)}
-        uiView.addAnnotation(allAnnotations as! MKAnnotation)
+        uiView.addAnnotations(allAnnotations)
     }
 }
 

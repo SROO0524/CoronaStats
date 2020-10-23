@@ -8,6 +8,7 @@
 
 import SwiftUI
 
+// Tabbar 생성
 struct ContentView: View {
 
     
@@ -21,6 +22,13 @@ struct ContentView: View {
             .tag(0)
             
         // map
+            MapContainerView()
+                //FillScreen 으로 보이도록 !
+                .edgesIgnoringSafeArea(.vertical)
+            .tabItem{
+                Tab(imageName: "map", text: "Map")
+            }
+            .tag(1)
         }
         
     }
