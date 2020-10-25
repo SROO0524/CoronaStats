@@ -32,13 +32,13 @@ class CovidFetchRequest: ObservableObject {
         
         AF.request("https://covid-19-data.p.rapidapi.com/totals?format=json", headers:
             headers).responseJSON { response in
-                
+                print(response)
                 let result = response.data
+                // value : 성공/실패를 구분해서 쓸수 있음 > 실패시 nil을 받는다
+                // data : 실패시 아무 값도 받지 않아 실패시 어떻게 처리해야할지 만들어야 한다. 이 코드에서는 실패시 메세지를 주는데 이 메세지는 백엔드에서 실패메세지를 어떻게 보내주느냐에 따라 달라질수 있음; (이 코드에서는 testTotalData)
                 
-                if result != nil {
-                    let json  = JSON(result!)
-                    //                    print(json)
-                    
+                let json  = JSON(result!)
+                if json["message"] == "" {
                     let confirmed = json[0]["confirmed"].intValue
                     let deaths = json[0]["deaths"].intValue
                     let recovered = json[0]["recovered"].intValue

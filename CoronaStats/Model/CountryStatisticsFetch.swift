@@ -19,6 +19,7 @@ class CountryStatisticsFetch: ObservableObject {
     let headers : HTTPHeaders = [
         "x-rapidapi-host": "covid-193.p.rapidapi.com",
         "x-rapidapi-key": "6d4235bc12mshe8fb5bb4d6292e2p17f0bfjsn73e6988ebeb0"
+//         Key : 접근권한을 주는 것! 로그인시 사용
     ]
     
     init() {
